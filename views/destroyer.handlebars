@@ -1,0 +1,33 @@
+
+<div id="page-background" class="destroyer">
+
+    <div class="container">
+
+        <div id="title-container" class="row">
+            <h1 class="display-4">Destroyer Of Worlds</h2>
+        </div>
+
+    </div>
+
+    <div id="worlds-container">
+        <div class="worlds-carousel"></div>
+    </div>
+
+    <div id="switch-container">
+        <div id="centered-content">
+            <a href='/' id="redemption-button">Find Redemption</a>
+        </div>
+    </div>
+
+    <div class="side-modal-container">
+                        
+        {{#each worlds}}
+            {{#unless destroyed}}
+                {{> worlds/destroyer-data}}
+            {{/unless}}
+        {{/each}}
+    
+        <div class="side-modal-bg"></div>
+    </div>
+    
+</div>
