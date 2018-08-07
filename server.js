@@ -1,10 +1,12 @@
 // ==============================================================================
 // Set Dependencies
+// Require the models folder for db sync
 // ==============================================================================
 
 var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
+var db = require('./models');
 
 // ==============================================================================
 // Express Setup
@@ -40,6 +42,8 @@ app.use(routes);
 // Server Listener
 // ==============================================================================
 
-app.listen(PORT, function() {
-    console.log('Server listening on http://localhost:' + PORT);
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log('Server listening on http://localhost:' + PORT);
+    });
 });

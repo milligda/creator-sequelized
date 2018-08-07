@@ -1,8 +1,8 @@
-# World Creator
+# World Creator (with Sequelize)
 
 ## Languages & Packages
 
-JavaScript, Node.js, Express.js, MySQL, Handlebars, Bootstrap, Flickity
+JavaScript, Node.js, Express.js, Sequelize, MySQL, Handlebars, Bootstrap, Flickity
 
 ## Overview
 
